@@ -21,8 +21,6 @@ def create_user(user: UserSchema):
 
     database.append(user_with_id)
 
-    print(f'User created: {user_with_id}')  # Debugging line
-
     return user_with_id
 
 
@@ -33,13 +31,13 @@ def read_users():
 
 @app.put('/users/{user_id}', response_model=UserPublic)
 def update_user(user_id: int, user: UserSchema):
-    if user_id > len(database) or user_id < 1:  # (1)!
+    if user_id > len(database) or user_id < 1:
         raise HTTPException(
             status_code=HTTPStatus.NOT_FOUND, detail='User not found'
-        )  # (2)!
+        )
 
     user_with_id = UserDB(**user.model_dump(), id=user_id)
-    database[user_id - 1] = user_with_id  # (3)!
+    database[user_id - 1] = user_with_id
 
     return user_with_id
 
