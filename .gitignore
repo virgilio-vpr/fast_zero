@@ -177,3 +177,5 @@ pyrightconfig.json
 
 # Generated using ignr.py - github.com/Antrikshy/ignr.py
 
+# Local configuration files .vscode/settings.json
+.vscode/settings.json
