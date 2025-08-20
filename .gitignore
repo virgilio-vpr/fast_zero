@@ -179,3 +179,6 @@ pyrightconfig.json
 
 # Local configuration files .vscode/settings.json
 .vscode/settings.json
+
+# Database file
+database.db
