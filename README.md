@@ -1,1 +1,1 @@
-# fast_zero_4.2
+# fast_zero
